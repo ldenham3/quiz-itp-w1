@@ -21,5 +21,11 @@ def matrix_sum(a_matrix):
     matrix_sum(m1)  #  80
     matrix_sum(m2)  # 198
     """
-    # Write your code here
-    pass
+    m_sum = 0
+    if type(a_matrix) == list:
+        for a_list in a_matrix:
+            for number in a_list:
+                m_sum += number
+        return m_sum
+    else:
+        return "matrix not given"
