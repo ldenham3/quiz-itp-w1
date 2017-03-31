@@ -29,7 +29,7 @@ def calculate_tax(income):
     calculate_tax(income)  # $210,000 * 0.35 = 73500 = $73,500
     """
     tax = 0
-    if type(income) == int and income >= 0:
+    if type(income) == int and income > 0:
         if income <= 50000:
             tax = income * 0.15
         elif income <= 75000:
@@ -39,5 +39,7 @@ def calculate_tax(income):
         else: 
             tax = income * 0.35
         return '${:,.2f}'.format(tax)
+    elif income == 0:
+        return 0
     else:
         return "you did something invalid"
