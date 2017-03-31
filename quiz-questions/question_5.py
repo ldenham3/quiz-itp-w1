@@ -38,7 +38,7 @@ def calculate_tax(income):
             tax = income * 0.30
         else: 
             tax = income * 0.35
-        return '${:,.2f}'.format(tax)
+        return tax
     elif income == 0:
         return 0
     else:
